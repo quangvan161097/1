@@ -1,102 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Personal Page</title>
+    <title>Facebook Login</title>
     <style>
-        /* Định dạng chung cho trang */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
-        
-        /* Định dạng tiêu đề */
-        header {
-            background-color: #4CAF50;
-            color: white;
+        .login-container {
+            display: flex;
+            max-width: 980px;
+            width: 100%;
             padding: 20px;
-            text-align: center;
+            justify-content: space-between;
         }
-
-        /* Định dạng nội dung chính */
-        .container {
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+        .left-section {
+            max-width: 480px;
         }
-
-        /* Định dạng phần giới thiệu */
-        .intro {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .intro img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        /* Định dạng phần kỹ năng */
-        .skills {
-            margin-top: 20px;
-        }
-
-        /* Định dạng phần liên hệ */
-        .contact {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .contact a {
-            text-decoration: none;
-            color: #4CAF50;
+        .left-section h1 {
+            color: #1877f2;
+            font-size: 48px;
             font-weight: bold;
+        }
+        .left-section p {
+            font-size: 24px;
+            color: #606770;
+        }
+        .right-section {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #165db0;
+        }
+        .login-form .forgot-password {
+            display: block;
+            text-align: center;
+            margin: 16px 0;
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .login-form .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .separator {
+            margin: 20px 0;
+            text-align: center;
+            color: #606770;
+            font-size: 14px;
+        }
+        .create-account-button {
+            background-color: #42b72a;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            width: 100%;
+        }
+        .create-account-button:hover {
+            background-color: #36a420;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Chào Mừng Anh Chị Em Đến Với Trang của Quangpromax</h1>
-        <p>Mình tên Quang sinh năm 1997!</p>
-    </header>
-
-    <div class="container">
-        <!-- Phần Giới Thiệu -->
-        <section class="intro">
-            <img src="https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/423326736_3481841118794199_3137414184324074381_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=kQr2dz1Dy0kQ7kNvgEviz4A&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=Am3k_fqGaAddFYJ5vkTXiwq&oh=00_AYD9RI1LsKKpUGbdfw4WLlo0YnmPPr-eBGY9x2iZkbIXng&oe=67337350" alt="Profile Photo">
-            <h2>Văn Phú Quang</h2>
-            <p>
-                Mình chỉ đang test thử thôi chứ không có chi hết ^^!
-            </p>
-        </section>
-
-        <!-- Phần Kỹ Năng -->
-        <section class="Điểm mạnh">
-            <h2>Điểm mạnh</h2>
-            <ul>
-                <li>Chân dài 1m73</li>
-                
-            </ul>
-        </section>
-
-        <!-- Phần Liên Hệ -->
-        <section class="contact">
-            <h2>Thông tin liên hệ</h2>
-            <p>Feel free to reach out to me on:</p>
-            <p>
-                <a href="https://www.facebook.com/quangvans97" target="_blank">Facebook</a> |
-                <a href="https://x.com/quangdg1" target="_blank">X</a> |
-                <a href="mailto:quangvan161097@gmail.com">Email</a>
-            </p>
-        </section>
+    <div class="login-container">
+        <div class="left-section">
+            <h1>Facebook</h1>
+            <p>Kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</p>
+        </div>
+        <div class="right-section">
+            <form class="login-form">
+                <input type="text" placeholder="Số điện thoại hoặc email" required>
+                <input type="password" placeholder="Mật khẩu" required>
+                <button type="submit">Đăng nhập</button>
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                <div class="separator">hoặc</div>
+                <button class="create-account-button">Tạo tài khoản mới</button>
+            </form>
+        </div>
     </div>
-
 </body>
 </html>
