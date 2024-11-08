@@ -12,14 +12,21 @@
       padding: 0;
       font-family: 'Poppins', sans-serif;
     }
-    body {
-      background: linear-gradient(45deg, #1a1a2e, #16213e);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      color: #fff;
-    }
+body {
+  background: linear-gradient(45deg, #1a1a2e, #16213e, #0078ff);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
     .login-container {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
