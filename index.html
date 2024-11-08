@@ -1,1 +1,92 @@
-
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(45deg, #1a1a2e, #16213e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      width: 350px;
+    }
+    .login-container h2 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    .login-container input[type="text"]::placeholder,
+    .login-container input[type="password"]::placeholder {
+      color: #b5b5b5;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #0078ff;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .login-container button:hover {
+      background-color: #005bb5;
+    }
+    .login-container .links {
+      margin-top: 1.5rem;
+    }
+    .login-container a {
+      color: #0078ff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .login-container a:hover {
+      color: #005bb5;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Đăng nhập Game</h2>
+    <form>
+      <input type="text" placeholder="Tên đăng nhập" required>
+      <input type="password" placeholder="Mật khẩu" required>
+      <button type="submit">Đăng nhập</button>
+      <div class="links">
+        <a href="#">Quên mật khẩu?</a> | <a href="#">Đăng ký tài khoản</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
