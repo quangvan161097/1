@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiệu ứng 3D</title>
+    <title>Hiệu ứng 3D với Hình ảnh</title>
     <style>
         body {
             display: flex;
@@ -32,21 +32,23 @@
             position: absolute;
             width: 150px;
             height: 150px;
-            background: rgba(255, 255, 255, 0.8);
             border: 2px solid #ddd;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: bold;
+            background-size: cover;
+            background-position: center;
         }
 
-        .face.front  { transform: rotateY(  0deg) translateZ(75px);  background: #FF6347; }
-        .face.back   { transform: rotateY(180deg) translateZ(75px);  background: #4682B4; }
-        .face.left   { transform: rotateY(-90deg) translateZ(75px); background: #32CD32; }
-        .face.right  { transform: rotateY( 90deg) translateZ(75px); background: #FFD700; }
-        .face.top    { transform: rotateX( 90deg) translateZ(75px); background: #FF69B4; }
-        .face.bottom { transform: rotateX(-90deg) translateZ(75px); background: #8A2BE2; }
+        /* Thay các đường dẫn ảnh tại đây */
+        .face.front  { transform: rotateY(  0deg) translateZ(75px);  background-image: url('image1.jpg'); }
+        .face.back   { transform: rotateY(180deg) translateZ(75px);  background-image: url('image2.jpg'); }
+        .face.left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('image3.jpg'); }
+        .face.right  { transform: rotateY( 90deg) translateZ(75px); background-image: url('image4.jpg'); }
+        .face.top    { transform: rotateX( 90deg) translateZ(75px); background-image: url('image5.jpg'); }
+        .face.bottom { transform: rotateX(-90deg) translateZ(75px); background-image: url('image6.jpg'); }
 
         @keyframes rotateCube {
             0% { transform: rotateX(20deg) rotateY(20deg); }
@@ -57,12 +59,12 @@
 <body>
     <div class="scene">
         <div class="cube">
-            <div class="face front">Front</div>
-            <div class="face back">Back</div>
-            <div class="face left">Left</div>
-            <div class="face right">Right</div>
-            <div class="face top">Top</div>
-            <div class="face bottom">Bottom</div>
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
         </div>
     </div>
 </body>
