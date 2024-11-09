@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiệu ứng 3D với Hình ảnh</title>
+    <title>Quyển Vở Tự Lật Trang với Hình Ảnh</title>
     <style>
         body {
             display: flex;
@@ -11,60 +11,76 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #333;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
 
-        .scene {
-            perspective: 1000px;
-        }
-
-        .cube {
+        .book {
             position: relative;
-            width: 150px;
-            height: 150px;
-            transform-style: preserve-3d;
-            transform: rotateX(20deg) rotateY(20deg);
-            animation: rotateCube 5s infinite linear;
+            width: 300px;
+            height: 400px;
+            perspective: 2000px;
         }
 
-        .face {
+        .cover {
             position: absolute;
-            width: 150px;
-            height: 150px;
-            border: 2px solid #ddd;
+            width: 100%;
+            height: 100%;
+            background-color: #8B4513;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: bold;
-            background-size: cover;
-            background-position: center;
+            transform-origin: left;
+            z-index: 5;
+            animation: coverFlip 6s infinite;
         }
 
-        /* Thay các đường dẫn ảnh tại đây */
-        .face.front  { transform: rotateY(  0deg) translateZ(75px);  background-image: url('vinhduc.jpg'); }
-        .face.back   { transform: rotateY(180deg) translateZ(75px);  background-image: url('image2.jpg'); }
-        .face.left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('image3.jpg'); }
-        .face.right  { transform: rotateY( 90deg) translateZ(75px); background-image: url('image4.jpg'); }
-        .face.top    { transform: rotateX( 90deg) translateZ(75px); background-image: url('image5.jpg'); }
-        .face.bottom { transform: rotateX(-90deg) translateZ(75px); background-image: url('image6.jpg'); }
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform-origin: left;
+            transition: transform 1s ease;
+        }
 
-        @keyframes rotateCube {
-            0% { transform: rotateX(20deg) rotateY(20deg); }
-            100% { transform: rotateX(20deg) rotateY(380deg); }
+        /* Các trang sẽ lật lần lượt */
+        .page:nth-child(2) { z-index: 4; animation: pageFlip 6s infinite 1s; }
+        .page:nth-child(3) { z-index: 3; animation: pageFlip 6s infinite 2s; }
+
+        /* CSS cho các hình ảnh trang */
+        .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Hiệu ứng lật trang */
+        @keyframes coverFlip {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(-150deg); }
+        }
+
+        @keyframes pageFlip {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(-150deg); }
         }
     </style>
 </head>
 <body>
-    <div class="scene">
-        <div class="cube">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face left"></div>
-            <div class="face right"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
+    <div class="book">
+        <div class="cover">Bìa</div>
+        <div class="page">
+            <img src="vinhduc.jpg" alt="Trang 1">
+        </div>
+        <div class="page">
+            <img src="image2.jpg" alt="Trang 2">
         </div>
     </div>
 </body>
