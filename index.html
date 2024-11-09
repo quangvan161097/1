@@ -3,85 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quyển Vở Tự Lật Trang với Hình Ảnh</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI trong Gym</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
-
-        .book {
-            position: relative;
-            width: 300px;
-            height: 400px;
-            perspective: 2000px;
-        }
-
-        .cover {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #8B4513;
+        header {
+            background-color: #333;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            transform-origin: left;
-            z-index: 5;
-            animation: coverFlip 6s infinite;
+            padding: 20px;
+            text-align: center;
         }
-
-        .page {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        .card {
             background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            transform-origin: left;
-            transition: transform 1s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
         }
-
-        /* Các trang sẽ lật lần lượt */
-        .page:nth-child(2) { z-index: 4; animation: pageFlip 6s infinite 1s; }
-        .page:nth-child(3) { z-index: 3; animation: pageFlip 6s infinite 2s; }
-
-        /* CSS cho các hình ảnh trang */
-        .page img {
+        .card img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
+            height: auto;
+            border-radius: 8px;
         }
-
-        /* Hiệu ứng lật trang */
-        @keyframes coverFlip {
-            0%, 100% { transform: rotateY(0deg); }
-            50% { transform: rotateY(-150deg); }
-        }
-
-        @keyframes pageFlip {
-            0%, 100% { transform: rotateY(0deg); }
-            50% { transform: rotateY(-150deg); }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="book">
-        <div class="cover">Bìa</div>
-        <div class="page">
-            <img src="vinhduc.jpg" alt="Trang 1">
-        </div>
-        <div class="page">
-            <img src="image2.jpg" alt="Trang 2">
-        </div>
+    <header>
+        <h1>AI trong Gym</h1>
+        <p>Ứng dụng trí tuệ nhân tạo trong việc nâng cao hiệu quả luyện tập và sức khỏe</p>
+    </header>
+
+    <nav>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Về AI trong Gym</a>
+        <a href="#">Ứng Dụng</a>
+        <a href="#">Liên Hệ</a>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>AI và Công Nghệ Trong Gym</h2>
+            <div class="card">
+                <h3>Đo Lường và Phân Tích Hiệu Quả Tập Luyện</h3>
+                <img src="https://via.placeholder.com/400x250" alt="AI and Training Analysis">
+                <p>AI có thể phân tích các bài tập của bạn, giúp bạn biết được hiệu quả luyện tập và chỉ ra các cải tiến cần thiết. Các ứng dụng AI có thể theo dõi nhịp tim, chuyển động và thời gian phục hồi để tối ưu hóa kế hoạch luyện tập.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Ứng Dụng AI trong Sức Khỏe và Thể Dục</h2>
+            <div class="card">
+                <h3>Huấn Luyện Viên Ảo với AI</h3>
+                <img src="https://via.placeholder.com/400x250" alt="AI Virtual Trainer">
+                <p>Với các ứng dụng AI, bạn có thể có một huấn luyện viên ảo, giúp bạn lập kế hoạch luyện tập cá nhân hóa, cung cấp các bài tập phù hợp và theo dõi sự tiến bộ của bạn.</p>
+            </div>
+
+            <div class="card">
+                <h3>Tạo Thực Đơn và Giám Sát Dinh Dưỡng</h3>
+                <img src="https://via.placeholder.com/400x250" alt="AI Nutrition">
+                <p>AI cũng có thể giúp bạn xây dựng chế độ ăn uống phù hợp với mục tiêu sức khỏe của bạn, cung cấp các lời khuyên về dinh dưỡng và tính toán các nhu cầu calo hàng ngày.</p>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2024 AI trong Gym - Tất cả quyền được bảo vệ</p>
+    </footer>
 </body>
 </html>
