@@ -4,110 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AI trong Gym</title>
+    <title>Vinh Danh - Hiệu Ứng Chuyển Động</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
+
         header {
-            background-color: #333;
+            background-color: #282c34;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav {
-            background-color: #444;
-            overflow: hidden;
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            float: left;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        h2 {
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
             color: #333;
         }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
         .card {
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
             text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease-in-out;
         }
+
         .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
+
+        .card h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         footer {
-            background-color: #333;
+            background-color: #282c34;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Animation for scrolling effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for cards */
+        .card {
+            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AI trong Gym</h1>
-        <p>Ứng dụng trí tuệ nhân tạo trong việc nâng cao hiệu quả luyện tập và sức khỏe</p>
+        <h1>Vinh Danh Những Người Xuất Sắc</h1>
+        <p>Chúng tôi tự hào giới thiệu những thành tích xuất sắc từ các cá nhân và nhóm.</p>
     </header>
 
-    <nav>
-        <a href="#">Trang Chủ</a>
-        <a href="#">Về AI trong Gym</a>
-        <a href="#">Ứng Dụng</a>
-        <a href="#">Liên Hệ</a>
-    </nav>
-
-    <div class="container">
-        <section class="section">
-            <h2>AI và Công Nghệ Trong Gym</h2>
+    <section>
+        <h2>Danh Sách Vinh Danh</h2>
+        <div class="card-container">
             <div class="card">
-                <h3>Đo Lường và Phân Tích Hiệu Quả Tập Luyện</h3>
-                <img src="https://via.placeholder.com/400x250" alt="AI and Training Analysis">
-                <p>AI có thể phân tích các bài tập của bạn, giúp bạn biết được hiệu quả luyện tập và chỉ ra các cải tiến cần thiết. Các ứng dụng AI có thể theo dõi nhịp tim, chuyển động và thời gian phục hồi để tối ưu hóa kế hoạch luyện tập.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Ứng Dụng AI trong Sức Khỏe và Thể Dục</h2>
-            <div class="card">
-                <h3>Huấn Luyện Viên Ảo với AI</h3>
-                <img src="https://via.placeholder.com/400x250" alt="AI Virtual Trainer">
-                <p>Với các ứng dụng AI, bạn có thể có một huấn luyện viên ảo, giúp bạn lập kế hoạch luyện tập cá nhân hóa, cung cấp các bài tập phù hợp và theo dõi sự tiến bộ của bạn.</p>
+                <img src="https://via.placeholder.com/150" alt="Person 1">
+                <h3>Nguyễn Văn A</h3>
+                <p>Chuyên gia về công nghệ, đã đạt được thành tựu xuất sắc trong việc sáng tạo các sản phẩm mới cho công ty.</p>
             </div>
 
             <div class="card">
-                <h3>Tạo Thực Đơn và Giám Sát Dinh Dưỡng</h3>
-                <img src="https://via.placeholder.com/400x250" alt="AI Nutrition">
-                <p>AI cũng có thể giúp bạn xây dựng chế độ ăn uống phù hợp với mục tiêu sức khỏe của bạn, cung cấp các lời khuyên về dinh dưỡng và tính toán các nhu cầu calo hàng ngày.</p>
+                <img src="https://via.placeholder.com/150" alt="Person 2">
+                <h3>Trần Thị B</h3>
+                <p>Lãnh đạo nhóm nghiên cứu, đã phát triển dự án nghiên cứu quan trọng với kết quả vượt trội.</p>
             </div>
-        </section>
-    </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Person 3">
+                <h3>Lê Minh C</h3>
+                <p>Chuyên viên tài chính xuất sắc, đã giúp công ty tăng trưởng lợi nhuận trong 3 năm liên tiếp.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 AI trong Gym - Tất cả quyền được bảo vệ</p>
+        <p>&copy; 2024 Vinh Danh - Tất cả quyền được bảo vệ</p>
     </footer>
+
+    <script>
+        // JavaScript for scroll-triggered animation
+        const cards = document.querySelectorAll('.card');
+
+        const showCard = (card) => {
+            card.classList.add('show');
+        };
+
+        window.addEventListener('scroll', () => {
+            cards.forEach((card) => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (cardTop < windowHeight - 100) {
+                    showCard(card);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
